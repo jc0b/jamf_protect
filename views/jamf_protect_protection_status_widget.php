@@ -2,7 +2,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-shield"></i>
-                <span data-i18n="jamf_protect.protection_status"></span>
+                <span data-i18n="jamf_protect.widget_protection_states"></span>
                 <list-link data-url="/show/listing/jamf_protect/jamf_protect"></list-link>
             </h3>
         </div>

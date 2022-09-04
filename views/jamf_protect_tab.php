@@ -32,9 +32,7 @@ $(document).on('appReady', function(){
 
                         // Format date
                         } else if((prop == "last_insights_sync" || prop == "last_check_in") && d[prop] > 0){
-			    var corrected_timestamp = (parseInt(d[prop]) * 1000);
-			    var date = new Date(parseInt(d[prop]));
-                // var date = new Date(parseInt(d[prop])*1000);
+		                    var date = new Date(parseInt(d[prop]));
                             rows = rows + '<tr><th>'+i18n.t('jamf_protect.'+prop)+'</th><td><span title="'+moment(date).fromNow()+'">'+moment(date).format('llll')+'</span></td></tr>';
                         } else {
                             rows = rows + '<tr><th>'+i18n.t('jamf_protect.'+prop)+'</th><td>'+d[prop]+'</td></tr>';

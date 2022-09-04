@@ -7,7 +7,6 @@ class Jamf_protect_processor extends Processor
 {
     public function run($plist)
     {
-        // Check if we have data
 		if ( ! $plist){
 			throw new Exception("Error Processing Request: No property list found", 1);
 		}
