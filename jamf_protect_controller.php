@@ -34,7 +34,7 @@ class Jamf_protect_controller extends Module_controller
     public function get_protection_stats()
     {
         jsonView(
-            Ms_defender_model::selectRaw("COUNT(CASE WHEN `protection_status` = 'Protected' THEN 1 END) AS 'protected'")
+            Jamf_protect_model::selectRaw("COUNT(CASE WHEN `protection_status` = 'Protected' THEN 1 END) AS 'protected'")
                 ->selectRaw("COUNT(CASE WHEN `protection_status` <> 'Protected' THEN 1 END) AS 'unprotected'")
                 ->filter()
                 ->first()
