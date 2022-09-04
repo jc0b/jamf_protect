@@ -11,5 +11,8 @@
     "plan_hash": "Plan Hash",
     "plan_id": "Plan ID",
     "tenant": "Tenant",
-    "running_monitors": "Running Monitors"
+    "running_monitors": "Running Monitors",
+    "widget_protected": "Jamf Protect Protection Status",
+    "protected": "Protected",
+    "unprotected": "Unprotected"
 }

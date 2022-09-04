@@ -1,0 +1,13 @@
+type: button
+widget_id: jamf_protect-protection-widget
+api_url: /module/jamf_protect/get_protection_stats
+i18n_title: jamf_protect.widget_protected
+icon: fa-shield
+listing_link: /show/listing/jamf_protect/jamf_protect
+buttons:
+  - label: unprotected
+    i18n_label: jamf_protect.unprotected
+    class: btn-danger 
+  - label: protected
+    i18n_label: jamf_protect.protected
+    class: btn-success

@@ -9,7 +9,9 @@ listings:
 reports:
     jamf_protect:
         view: jamf_protect_report
-        i18n: jamf_protect.title
+        i18n: jamf_protect.report_title
 widgets:
     jamf_protect_protection_status:
         view: jamf_protect_protection_status_widget
+    jamf_protect_healthy:
+        view: jamf_protect_healthy_widgey

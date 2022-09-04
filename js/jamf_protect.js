@@ -1,7 +1,6 @@
 // re-use of Tuxudo's ms_defenderTimestampToMoment in tuxudo/ms_defender
 var jamf_protectTimestampToMoment = function(col, row){
     var cell = $('td:eq('+col+')', row);
-    // var checkin = parseInt(cell.text()) * 1000;
     var checkin = parseInt(cell.text());
     if (checkin > 0){
 	console.log("Checkin: " +checkin);

@@ -28,35 +28,19 @@ class Jamf_protect_controller extends Module_controller
 	    );
     }
 
-    // /**
-    //  * Get jamf_protect status information for widget
-    //  *
-    //  **/
-    // public function get_status()
-    // {
-    //     jsonView(
-    //         $out = Ms_defender_model::selectRaw('healthy, count(*) AS count')
-    //             ->filter()
-    //             ->groupBy('healthy')
-    //             ->orderBy('count', 'desc')
-    //             ->get()
-    //             ->toArray()
-    //         );
-    // }
-
-    // /**
-    //  * Get ms_defender health stats for new widget
-    // **/
-    // public function get_health_stats()
-    // {
-    //     jsonView(
-    //         Ms_defender_model::selectRaw("COUNT(CASE WHEN `healthy` = '1' THEN 1 END) AS 'healthy'")
-    //             ->selectRaw("COUNT(CASE WHEN `healthy` = '0' THEN 1 END) AS 'unhealthy'")
-    //             ->filter()
-    //             ->first()
-    //             ->toLabelCount()
-    //     );
-    // }
+    /**
+     * Get jamf_protect health stats
+    **/
+    public function get_protection_stats()
+    {
+        jsonView(
+            Ms_defender_model::selectRaw("COUNT(CASE WHEN `protection_status` = 'Protected' THEN 1 END) AS 'protected'")
+                ->selectRaw("COUNT(CASE WHEN `protection_status` <> 'Protected' THEN 1 END) AS 'unprotected'")
+                ->filter()
+                ->first()
+                ->toLabelCount()
+        );
+    }
 
     /**
      * Get jamf_protect information for serial_number
