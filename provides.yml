@@ -1,0 +1,15 @@
+client_tabs:
+    jamf_protect-tab:
+        view: jamf_protect_tab
+        i18n: jamf_protect.title
+listings:
+    jamf_protect:
+        view: jamf_protect_listing
+        i18n: jamf_protect.title
+reports:
+    jamf_protect:
+        view: jamf_protect_report
+        i18n: jamf_protect.title
+widgets:
+    jamf_protect_protection_status:
+        view: jamf_protect_protection_status_widget

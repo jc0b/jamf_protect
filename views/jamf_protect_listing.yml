@@ -1,0 +1,22 @@
+i18n_title: jamf_protect.report_title
+js_link: module/jamf_protect/js/jamf_protect
+table:
+    -
+        column: machine.computer_name
+        i18n_header: listing.computername
+        formatter: clientDetail
+        tab_link: jamf_protect
+    -
+        column: reportdata.serial_number
+        i18n_header: serial
+    - {i18n_header: jamf_protect.protection_status, column: jamf_protect.protection_status}
+    - {i18n_header: jamf_protect.protect_version, column: jamf_protect.protect_version}
+    - {i18n_header: jamf_protect.last_insights_sync, column: jamf_protect.last_insights_sync, formatter: jamf_protectTimestampToMoment}
+    - {i18n_header: jamf_protect.last_check_in, column: jamf_protect.last_check_in, formatter: jamf_protectTimestampToMoment}
+    - {i18n_header: jamf_protect.connection_identifier, column: jamf_protect.connection_identifier}
+    - {i18n_header: jamf_protect.connection_state, column: jamf_protect.connection_state}
+    - {i18n_header: jamf_protect.install_type, column: jamf_protect.install_type}
+    - {i18n_header: jamf_protect.plan_hash, column: jamf_protect.plan_hash}
+    - {i18n_header: jamf_protect.plan_id, column: jamf_protect.plan_id}
+    - {i18n_header: jamf_protect.tenant, column: jamf_protect.tenant}
+    - {i18n_header: jamf_protect.running_monitors, column: jamf_protect.running_monitors}

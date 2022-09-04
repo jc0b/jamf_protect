@@ -1,0 +1,15 @@
+{ 
+    "title": "Jamf Protect",
+    "report_title": "Jamf Protect Report",
+    "protection_status": "Protection Status",
+    "protect_version": "Version",
+    "last_insights_sync": "Last Insights",
+    "last_check_in": "Last Check-In",
+    "connection_identifier": "Connection Identifier",
+    "connection_state": "Connection State",
+    "install_type": "Install Type",
+    "plan_hash": "Plan Hash",
+    "plan_id": "Plan ID",
+    "tenant": "Tenant",
+    "running_monitors": "Running Monitors"
+}
