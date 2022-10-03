@@ -27,8 +27,6 @@ class JamfProtect extends Migration
             $table->index('connection_identifier');
             $table->index('connection_state');
             $table->index('install_type');
-            $table->index('last_check_in');
-            $table->index('last_insights_sync');
             $table->index('plan_hash');
             $table->index('plan_id');
             $table->index('protect_version');
