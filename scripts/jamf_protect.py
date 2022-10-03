@@ -75,7 +75,7 @@ def main():
     """Main"""
 
     # Check if Jamf Protect is installed
-    if  not os.path.isfile('/usr/local/bin/protectctl'):
+    if not os.path.isfile('/usr/local/bin/protectctl'):
         print("ERROR: Jamf Protect is not installed")
         exit(0)
 
