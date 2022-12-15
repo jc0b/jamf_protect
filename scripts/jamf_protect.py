@@ -1,4 +1,4 @@
-#!/usr/local/munkireport/munkireport-python2
+#!/usr/local/munkireport/munkireport-python3
 
 import os
 import subprocess
@@ -19,7 +19,7 @@ def get_jp_data():
 
     out = {}
 
-    output_json = json.loads(output, object_hook=_decode_dict)
+    output_json = json.loads(output.decode(), object_hook=_decode_dict)
 
     out['connection_identifier'] = output_json['Connection']['identifier']
     out['connection_state'] = output_json['Connection']['state']
@@ -37,7 +37,7 @@ def get_jp_data():
 
 def list_running_monitors(monitors):
     result = []
-    for monitor in monitors.keys():
+    for monitor in list(monitors.keys()):
         if len(monitors[monitor]) > 0:
             if monitors[monitor]["running"]:
                 result.append(monitor)
@@ -47,7 +47,7 @@ def list_running_monitors(monitors):
 def _decode_list(data):
     rv = []
     for item in data:
-        if isinstance(item, unicode):
+        if isinstance(item, str):
             item = item.encode('utf-8')
         elif isinstance(item, list):
             item = _decode_list(item)
@@ -58,10 +58,10 @@ def _decode_list(data):
 
 def _decode_dict(data):
     rv = {}
-    for key, value in data.iteritems():
-        if isinstance(key, unicode):
+    for key, value in data.items():
+        if isinstance(key, str):
             key = key.encode('utf-8')
-        if isinstance(value, unicode):
+        if isinstance(value, str):
             value = value.encode('utf-8')
         elif isinstance(value, list):
             value = _decode_list(value)
@@ -85,7 +85,11 @@ def main():
     # Write results to cache
     cachedir = '%s/cache' % os.path.dirname(os.path.realpath(__file__))
     output_plist = os.path.join(cachedir, 'jamf_protect.plist')
-    plistlib.writePlist(result, output_plist)
+    try:
+        plistlib.writePlist(result, output_plist)
+    except:
+        with open(output_plist, 'wb') as fp:
+            plistlib.dump(result, fp, fmt=plistlib.FMT_XML)
 
 if __name__ == "__main__":
     main()
