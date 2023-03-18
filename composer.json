@@ -1,8 +1,5 @@
 {
     "name": "jc0b/jamf_protect",
     "description": "A MunkiReport module for Jamf Protect.",
-    "license": "MIT",
-    "require": {
-        "php":"^7.0"
-    }
+    "license": "MIT"
 }
