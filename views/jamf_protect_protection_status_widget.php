@@ -1,15 +1,14 @@
 <div class="col-md-4">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-shield"></i>
-                <span data-i18n="jamf_protect.widget_protection_states"></span>
-                <list-link data-url="/show/listing/jamf_protect/jamf_protect"></list-link>
-            </h3>
+    <div class="card">
+        <div class="card-heading">
+            <i class="fa fa-shield"></i>
+            <span data-i18n="jamf_protect.widget_protection_states"></span>
+            <a href="/show/listing/jamf_protect/jamf_protect" class="pull-right"><i class="fa fa-list"></i></a>
         </div>
-        <div id="ip-panel" class="panel-body text-center">
+        <div id="ip-card" class="card-body text-center">
             <svg id="jamf_protect-protection-status" style="width:100%; height: 300px"></svg>
         </div>
-    </div><!-- /panel -->
+    </div><!-- /card -->
 </div><!-- /col -->
 
 <script>
