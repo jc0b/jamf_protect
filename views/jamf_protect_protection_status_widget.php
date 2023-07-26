@@ -1,6 +1,6 @@
 <div class="col-md-4">
     <div class="card">
-        <div class="card-heading">
+        <div class="card-header">
             <i class="fa fa-shield"></i>
             <span data-i18n="jamf_protect.widget_protection_states"></span>
             <a href="/show/listing/jamf_protect/jamf_protect" class="pull-right"><i class="fa fa-list"></i></a>
