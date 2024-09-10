@@ -19,7 +19,7 @@ def get_jp_data():
 
     out = {}
 
-    output_json = json.loads(output.decode(), object_hook=_decode_dict)
+    output_json = json.loads(output.decode('utf-8'))
 
     out['connection_identifier'] = output_json['Connection']['identifier']
     out['connection_state'] = output_json['Connection']['state']
